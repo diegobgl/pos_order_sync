@@ -1,0 +1,13 @@
+<odoo>
+    <template id="assets_backend" name="pos_order_sync_assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/mi_modulo_pos_order_sync/static/src/js/pos_order_sync.js"></script>
+        </xpath>
+    </template>
+
+    <template id="DraftOrderButton" name="DraftOrderButton">
+        <div class='button draft-order'>
+            Enviar como Borrador
+        </div>
+    </template>
+</odoo>
