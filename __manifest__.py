@@ -23,13 +23,23 @@
         'security/ir.model.access.csv',
         'views/pos_order_view.xml',
         #'views/pos_config_view.xml',
-        'views/templates.xml',
+        #'views/templates.xml',
         'security/groups.xml'
     ],
     'demo': [],
-    'qweb': [
-        'static/src/xml/pos_order_sync.xml',
-    ],
+
+    'assets': {
+        'point_of_sale.assets': [
+            'pos_order_sync/static/src/js/tu_script.js',
+            # ... (otros archivos JS y CSS)
+        ],
+    'web.assets_qweb': [
+            'pos_order_sync/static/src/xml/**/*',
+        ],
+
+
+
+
     'installable': True,
     'application': True,
     'auto_install': False,
