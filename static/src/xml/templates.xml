@@ -1,16 +1,14 @@
 <odoo>
-    <template id="assets_backend" name="pos_order_sync_assets" inherit_id="web.assets_backend">
+    <template id="pos_order_sync_assets" inherit_id="point_of_sale.assets" name="POS Order Sync Assets">
         <xpath expr="." position="inside">
+            <!-- Ensure the path to the JS file is correct -->
             <script type="text/javascript" src="/pos_order_sync/static/src/js/pos_order_sync.js"></script>
         </xpath>
     </template>
 
- <templates>
-    <t t-name="DraftOrderButton" owl="1">
+    <template id="pos_order_sync_button">
         <div class="button draft-order" t-on-click="sendDraftOrder">
             Enviar como Borrador
         </div>
-    </t>
-</templates>
-
+    </template>
 </odoo>

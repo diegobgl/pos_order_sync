@@ -31,6 +31,7 @@
     'assets': {
         'point_of_sale.assets': [
             'pos_order_sync/static/src/js/pos_order_sync.js',
+            'pos_order_sync/static/src/xml/**/*',
             # ... (otros archivos JS y CSS)
         ],
     'web.assets_qweb': [
