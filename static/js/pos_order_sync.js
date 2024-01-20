@@ -1,4 +1,4 @@
-odoo.define('mi_modulo_pos_order_sync.pos_order_sync', function(require) {
+odoo.define('pos_order_sync.pos_order_sync', function(require) {
     'use strict';
 
     var models = require('point_of_sale.models');
