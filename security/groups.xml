@@ -1,0 +1,9 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Creación de un nuevo grupo -->
+        <record id="group_custom_pos_user" model="res.groups">
+            <field name="name">Usuario POS Personalizado</field>
+            <field name="category_id" ref="module_category_point_of_sale"/>
+        </record>
+    </data>
+</odoo>

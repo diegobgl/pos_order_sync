@@ -24,6 +24,7 @@
         'views/pos_order_view.xml',
         'views/pos_config_view.xml',
         'views/templates.xml',
+        'security/groups.xml'
     ],
     'demo': [],
     'qweb': [
