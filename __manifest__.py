@@ -36,7 +36,7 @@
     'web.assets_qweb': [
             'pos_order_sync/static/src/xml/**/*',
         ],
-    }
+    },
 
 
 
