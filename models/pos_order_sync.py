@@ -23,3 +23,6 @@ class PosOrder(models.Model):
         if draft_order.is_draft_order:
             # Aquí se implementaría la lógica para procesar el pago.
             pass
+    
+    def set_draft_order(self):
+        self.is_draft_order = True

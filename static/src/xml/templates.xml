@@ -5,9 +5,12 @@
         </xpath>
     </template>
 
-    <template id="DraftOrderButton" name="DraftOrderButton">
-        <div class='button draft-order'>
+ <templates>
+    <t t-name="DraftOrderButton" owl="1">
+        <div class="button draft-order" t-on-click="sendDraftOrder">
             Enviar como Borrador
         </div>
-    </template>
+    </t>
+</templates>
+
 </odoo>

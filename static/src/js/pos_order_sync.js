@@ -3,11 +3,7 @@ odoo.define('pos_order_sync.pos_order_sync', function(require) {
 
     var models = require('point_of_sale.models');
     var screens = require('point_of_sale.screens');
-    var PosModel = models.PosModel;
-    var Order = models.Order;
-    var Orderline = models.Orderline;
 
-    // Extensión del modelo Order para soportar órdenes borrador
     var _super_order = models.Order.prototype;
     models.Order = models.Order.extend({
         initialize: function(attributes, options) {
@@ -25,32 +21,16 @@ odoo.define('pos_order_sync.pos_order_sync', function(require) {
         },
     });
 
-    // Extensión del modelo PosModel para agregar funcionalidad de órdenes borrador
-    var _super_posmodel = models.PosModel.prototype;
-    models.PosModel = models.PosModel.extend({
-        push_order: function(order) {
-            if (order && order.is_draft_order) {
-                // Implementar lógica para enviar la orden como borrador al backend
-                return Promise.resolve();
-            }
-            return _super_posmodel.push_order.apply(this, arguments);
-        },
-    });
-
-    // Botón para enviar orden como borrador
     var DraftOrderButton = screens.ActionButtonWidget.extend({
         template: 'DraftOrderButton',
         button_click: function(){
-            var order = this.pos.get_order();
-            order.set_draft_order(true);
-            // Implementar lógica para marcar y enviar la orden como borrador
+            this.pos.get_order().set_draft_order(true);
+            // Aquí puedes agregar lógica para enviar la orden al backend
         },
     });
 
     screens.define_action_button({
-        'name': 'draft_order',
+        'name': 'draft_order_button',
         'widget': DraftOrderButton,
     });
-
-    // Aquí se pueden agregar otras extensiones o lógicas JS necesarias
 });
